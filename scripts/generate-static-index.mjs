@@ -17,7 +17,7 @@ const cssFiles = files
   .sort();
 
 const jsFiles = files
-  .filter((file) => file.endsWith(".js"))
+  .filter((file) => file.startsWith("index-") && file.endsWith(".js"))
   .map((file) => {
     const fullPath = path.join(assetsDir, file);
     return {
