@@ -165,21 +165,22 @@ export function Catalogue() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
+          {/* TODO: Place the real PDF file at public/catalogue.pdf */}
+          <a
+            href="/catalogue.pdf"
+            download
+            aria-label="Download Krishna Copy Udyog product catalogue PDF"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-card border border-border text-primary font-semibold hover:border-accent transition"
+          >
+            <Download className="h-4 w-4" /> Download Catalogue
+          </a>
           <a
             href={waLink(`Hello ${SITE.name}, please share the latest catalogue and bulk pricing.`)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-success text-white font-semibold shadow-card hover:-translate-y-0.5 transition"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-success text-white font-semibold hover:-translate-y-0.5 transition"
           >
             <MessageCircle className="h-4 w-4" /> WhatsApp for Bulk Price
-          </a>
-          <a
-            href={waLink(`Hello ${SITE.name}, please send the product catalogue PDF.`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-card border border-border text-primary font-semibold hover:border-accent transition"
-          >
-            <Download className="h-4 w-4" /> Request Catalogue
           </a>
         </div>
       </div>
