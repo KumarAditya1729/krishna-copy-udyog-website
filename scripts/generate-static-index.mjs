@@ -1,16 +1,13 @@
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import path from "node:path";
 
-const clientDir = resolve("dist/client");
-const assetsDir = resolve(clientDir, "assets");
-const indexPath = resolve(clientDir, "index.html");
-
-if (!existsSync(clientDir)) {
-  throw new Error("dist/client not found. Run vite build first.");
-}
+const projectRoot = process.cwd();
+const clientDir = path.join(projectRoot, "dist", "client");
+const assetsDir = path.join(clientDir, "assets");
+const indexPath = path.join(clientDir, "index.html");
 
 if (!existsSync(assetsDir)) {
-  throw new Error("dist/client/assets not found. Build assets are missing.");
+  throw new Error("dist/client/assets not found. Run vite build first.");
 }
 
 const files = readdirSync(assetsDir);
@@ -21,37 +18,37 @@ const cssFiles = files
 
 const jsFiles = files
   .filter((file) => file.endsWith(".js"))
-  .filter((file) => file.startsWith("index-"))
-  .sort();
+  .map((file) => {
+    const fullPath = path.join(assetsDir, file);
+    return {
+      file,
+      fullPath,
+      size: statSync(fullPath).size,
+      content: readFileSync(fullPath, "utf8"),
+    };
+  });
 
-if (jsFiles.length === 0) {
-  throw new Error("No built JS entry files found in dist/client/assets.");
-}
+const browserEntryCandidates = jsFiles
+  .filter(({ content }) =>
+    /hydrateRoot|createRoot|StartClient|createRouter|RouterProvider|startTransition/.test(content)
+  )
+  .sort((a, b) => a.size - b.size);
 
-// Find the correct browser entry module from manifest/build output
-const manifestPath = resolve(clientDir, ".vite/manifest.json");
-let entryModule = "index.js";
-
-if (existsSync(manifestPath)) {
-  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-  for (const file of jsFiles) {
-    if (manifest[file] && manifest[file].isEntry && !manifest[file].isDynamic) {
-      entryModule = file;
-      break;
-    }
+if (browserEntryCandidates.length === 0) {
+  console.log("Available JS files:");
+  for (const item of jsFiles.sort((a, b) => a.size - b.size)) {
+    console.log(`- ${item.file} (${item.size} bytes)`);
   }
-} else {
-  // If client manifest does not exist, choose the smallest index-*.js as the bootstrap entry
-  entryModule = jsFiles.reduce((a, b) => (a.length < b.length ? a : b));
+  throw new Error("Could not identify browser entry JS file.");
 }
+
+const entryFile = browserEntryCandidates[0].file;
 
 const cssTags = cssFiles
   .map((file) => `    <link rel="stylesheet" href="/assets/${file}" />`)
   .join("\n");
 
-const scriptTags = jsFiles
-  .map((file) => `    <script type="module" src="/assets/${file}"></script>`)
-  .join("\n");
+const scriptTag = `    <script type="module" src="/assets/${entryFile}"></script>`;
 
 const html = `<!doctype html>
 <html lang="en">
@@ -61,13 +58,13 @@ const html = `<!doctype html>
     <title>Krishna Copy Udyog | Notebook Manufacturer in Patna</title>
     <meta
       name="description"
-      content="Krishna Copy Udyog is a Patna-based manufacturer and wholesale supplier of school notebooks, spiral notebooks, A4 registers, writing copies, and stationery products. Contact for catalogue and bulk orders."
+      content="Krishna Copy Udyog is a Patna-based educational stationery manufacturer and wholesale trader offering notebooks, registers, worksheets, catalogue download, and bulk order support."
     />
 ${cssTags}
   </head>
   <body>
     <div id="root"></div>
-${scriptTags}
+${scriptTag}
   </body>
 </html>
 `;
@@ -76,3 +73,4 @@ mkdirSync(clientDir, { recursive: true });
 writeFileSync(indexPath, html, "utf8");
 
 console.log(`Created ${indexPath}`);
+console.log(`Using browser entry: /assets/${entryFile}`);
