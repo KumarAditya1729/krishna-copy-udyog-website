@@ -4,7 +4,6 @@ import smallImg from "@/assets/small-copy.jpg";
 import a4Img from "@/assets/a4-register.jpg";
 import rangeImg from "@/assets/register-range.jpg";
 import regularImg from "@/assets/regular-a4-register.jpg";
-import spiralImg from "@/assets/spiral-notebook.jpg";
 import bulkImg from "@/assets/bulk-order-packaging.jpg";
 
 import compImg from "@/assets/composition.jpg";
@@ -91,11 +90,6 @@ const items: Item[] = [
       { pages: "400 pages", price: "₹50" },
       { pages: "500 pages", price: "₹60" },
     ],
-  },
-  {
-    img: spiralImg,
-    title: "Spiral Notebook",
-    text: "Available for school, office, and custom bulk orders. Contact for size and page options.",
   },
   {
     img: bulkImg,
