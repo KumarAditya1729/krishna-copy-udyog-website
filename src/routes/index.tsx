@@ -5,6 +5,7 @@ import { TrustStrip } from "@/components/site/TrustStrip";
 import { About } from "@/components/site/About";
 import { Products } from "@/components/site/Products";
 import { Catalogue } from "@/components/site/Catalogue";
+import { Testimonials } from "@/components/site/Testimonials";
 import { Certifications } from "@/components/site/Certifications";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Process } from "@/components/site/Process";
@@ -81,6 +82,7 @@ function Index() {
         <About />
         <Products />
         <Catalogue />
+        <Testimonials />
         <Certifications />
         <WhyUs />
         <Process />
