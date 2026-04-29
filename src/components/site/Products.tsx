@@ -1,8 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { SITE, waLink } from "@/lib/site";
 import schoolImg from "@/assets/school-notebooks.jpg";
-import a4Img from "@/assets/a4-register.jpg";
-import spiralImg from "@/assets/spiral-notebook.jpg";
 import plainImg from "@/assets/plain-writing-notebook.jpg";
 import customImg from "@/assets/custom-printed-notebook.jpg";
 import bulkImg from "@/assets/bulk-order-packaging.jpg";
@@ -44,16 +42,7 @@ const products = [
     title: "Standard Notebooks",
     desc: "Durable and affordable notebooks for students, schools, coaching institutes, and stationery suppliers.",
   },
-  {
-    img: a4Img,
-    title: "A4 Registers",
-    desc: "High-quality A4 registers for offices, schools, coaching institutes, and wholesale buyers.",
-  },
-  {
-    img: spiralImg,
-    title: "Spiral Notebooks",
-    desc: "Spiral-bound notebooks with smooth pages and clean finishing for students and professionals.",
-  },
+
   {
     img: plainImg,
     title: "Plain Writing Notebooks",
