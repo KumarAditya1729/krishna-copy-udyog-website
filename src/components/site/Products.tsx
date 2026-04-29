@@ -7,11 +7,11 @@ import plainImg from "@/assets/plain-writing-notebook.jpg";
 import customImg from "@/assets/custom-printed-notebook.jpg";
 import bulkImg from "@/assets/bulk-order-packaging.jpg";
 
-import compImg from "@/assets/composition.svg";
-import dubaiImg from "@/assets/dubai-long.svg";
-import orangeImg from "@/assets/schooltime.svg";
-import premiumImg from "@/assets/premium-spiral.svg";
-import leatherImg from "@/assets/leather.svg";
+import compImg from "@/assets/composition.jpg";
+import dubaiImg from "@/assets/dubai-long.jpg";
+import orangeImg from "@/assets/schooltime.jpg";
+import premiumImg from "@/assets/premium-spiral.jpg";
+import leatherImg from "@/assets/leather.jpg";
 
 const products = [
   {
