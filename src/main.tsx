@@ -7,6 +7,7 @@ import { TrustStrip } from "./components/site/TrustStrip";
 import { About } from "./components/site/About";
 import { Products } from "./components/site/Products";
 import { Catalogue } from "./components/site/Catalogue";
+import { Testimonials } from "./components/site/Testimonials";
 import { Certifications } from "./components/site/Certifications";
 import { Process } from "./components/site/Process";
 import { WhyUs } from "./components/site/WhyUs";
@@ -26,6 +27,7 @@ function App() {
         <About />
         <Products />
         <Catalogue />
+        <Testimonials />
         <Certifications />
         <Process />
         <WhyUs />
