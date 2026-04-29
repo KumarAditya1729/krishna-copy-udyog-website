@@ -7,10 +7,41 @@ import plainImg from "@/assets/plain-writing-notebook.jpg";
 import customImg from "@/assets/custom-printed-notebook.jpg";
 import bulkImg from "@/assets/bulk-order-packaging.jpg";
 
+import compImg from "@/assets/composition.svg";
+import dubaiImg from "@/assets/dubai-long.svg";
+import orangeImg from "@/assets/schooltime.svg";
+import premiumImg from "@/assets/premium-spiral.svg";
+import leatherImg from "@/assets/leather.svg";
+
 const products = [
   {
+    img: compImg,
+    title: "Premium Composition Notebook",
+    desc: "Classic black and white speckled pattern, perfect for school and journaling. Available with fun sticker customization options.",
+  },
+  {
+    img: dubaiImg,
+    title: "MAYRA Long Note Book",
+    desc: "Inspirational and graphic covers like Dubai skyline. Smooth writing pages for daily use.",
+  },
+  {
+    img: orangeImg,
+    title: "Schooltime Orange Notebook",
+    desc: "Standard school notebook with classic lined cover and name label box.",
+  },
+  {
+    img: premiumImg,
+    title: "Scholar Apple Premium Spiral",
+    desc: "High-quality spiral notebook with shiny 3D embossed copper rose and space designs.",
+  },
+  {
+    img: leatherImg,
+    title: "MAYRA Quality Leather Look",
+    desc: "Elegant leather-feel notebook with beautiful nature and travel themes.",
+  },
+  {
     img: schoolImg,
-    title: "School Notebooks",
+    title: "Standard Notebooks",
     desc: "Durable and affordable notebooks for students, schools, coaching institutes, and stationery suppliers.",
   },
   {

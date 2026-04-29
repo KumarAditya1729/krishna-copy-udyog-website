@@ -7,6 +7,12 @@ import regularImg from "@/assets/regular-a4-register.jpg";
 import spiralImg from "@/assets/spiral-notebook.jpg";
 import bulkImg from "@/assets/bulk-order-packaging.jpg";
 
+import compImg from "@/assets/composition.svg";
+import dubaiImg from "@/assets/dubai-long.svg";
+import schoolImg from "@/assets/schooltime.svg";
+import premiumImg from "@/assets/premium-spiral.svg";
+import leatherImg from "@/assets/leather.svg";
+
 type Item = {
   img: string;
   title: string;
@@ -16,6 +22,31 @@ type Item = {
 };
 
 const items: Item[] = [
+  {
+    img: compImg,
+    title: "Premium Composition Notebook",
+    text: "Classic black and white speckled pattern, perfect for school and journaling. Available with fun sticker customization options.",
+  },
+  {
+    img: dubaiImg,
+    title: "MAYRA Long Note Book",
+    text: "Inspirational and graphic covers like Dubai skyline. Smooth writing pages for daily use.",
+  },
+  {
+    img: schoolImg,
+    title: "Schooltime Orange Notebook",
+    text: "Standard school notebook with classic lined cover and name label box.",
+  },
+  {
+    img: premiumImg,
+    title: "Scholar Apple Premium Spiral",
+    text: "High-quality spiral notebook with shiny 3D embossed copper rose and space designs.",
+  },
+  {
+    img: leatherImg,
+    title: "MAYRA Quality Leather Look",
+    text: "Elegant leather-feel notebook with beautiful nature and travel themes.",
+  },
   {
     img: smallImg,
     title: "Small Notebook / Copy",
@@ -94,16 +125,16 @@ export function Catalogue() {
           {items.map((it) => (
             <article
               key={it.title}
-              className="rounded-3xl bg-card border border-border overflow-hidden shadow-soft hover:shadow-card transition grid sm:grid-cols-5"
+              className="group rounded-3xl bg-card border border-border overflow-hidden shadow-soft hover:shadow-lift transition-all duration-300 grid sm:grid-cols-5"
             >
-              <div className="sm:col-span-2 aspect-[4/3] sm:aspect-auto bg-secondary/40 overflow-hidden">
+              <div className="sm:col-span-2 aspect-[4/3] sm:aspect-auto bg-secondary/40 overflow-hidden relative">
                 <img
                   src={it.img}
                   alt={it.title}
                   width={1024}
                   height={768}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="sm:col-span-3 p-5 sm:p-6 flex flex-col">
