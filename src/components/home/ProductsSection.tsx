@@ -1,0 +1,97 @@
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Check } from "lucide-react";
+
+export function ProductsSection() {
+  const products = [
+    {
+      title: "School Notebooks",
+      desc: "Standard sizes for all grades",
+      specs: ["60/70/80 GSM", "A5, B5, A4 Sizes", "Saddle Stitch"],
+      moq: "5,000 Pcs",
+      image: "https://images.unsplash.com/photo-1531346878377-2f39ce26d833?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      title: "Exercise Books",
+      desc: "Ruled, unruled, math, and practical",
+      specs: ["58-70 GSM", "Standard Sizes", "Stapled"],
+      moq: "10,000 Pcs",
+      image: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      title: "Spiral Notebooks",
+      desc: "Premium spiral binding for college & office",
+      specs: ["70/80 GSM", "A4, A5 Sizes", "Metal/Plastic Spiral"],
+      moq: "3,000 Pcs",
+      image: "https://images.unsplash.com/photo-1585800080648-5c4e95444a7f?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      title: "Registers & Ledgers",
+      desc: "Hardbound long books and registers",
+      specs: ["70 GSM", "Foolscap Size", "Section Sewn / Hardbound"],
+      moq: "2,000 Pcs",
+      image: "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      title: "Custom Printed",
+      desc: "School or corporate branding on covers",
+      specs: ["Variable GSM", "Any Size", "Any Binding"],
+      moq: "10,000 Pcs",
+      image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      title: "OEM Branded",
+      desc: "Complete private label manufacturing",
+      specs: ["Premium GSM", "Custom Specs", "Export Packaging"],
+      moq: "1 20ft Container",
+      image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=600&auto=format&fit=crop"
+    }
+  ];
+
+  return (
+    <section id="products" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <Badge variant="outline" className="mb-4 text-primary border-primary/20">Our Products</Badge>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Premium Quality Notebooks</h2>
+          <p className="text-muted-foreground text-lg">
+            Manufactured with high-grade paper and state-of-the-art machinery. Available for bulk domestic supply and international export.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product, index) => (
+            <Card key={index} className="overflow-hidden border-border transition-shadow hover:shadow-card group bg-background">
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <Badge className="absolute top-4 right-4 z-10 bg-green-500 hover:bg-green-600">Export Ready</Badge>
+                <img 
+                  src={product.image} 
+                  alt={product.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">{product.title}</CardTitle>
+                <CardDescription>{product.desc}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 mb-6">
+                  {product.specs.map((spec, i) => (
+                    <li key={i} className="flex items-center text-sm text-muted-foreground">
+                      <Check className="h-4 w-4 text-primary mr-2 shrink-0" />
+                      {spec}
+                    </li>
+                  ))}
+                </ul>
+                <div className="pt-4 border-t border-border flex justify-between items-center font-medium">
+                  <span className="text-muted-foreground">MOQ:</span>
+                  <span>{product.moq}</span>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
