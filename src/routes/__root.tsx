@@ -1,4 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { StickyWhatsApp } from "@/components/layout/StickyWhatsApp";
 
 import appCss from "../styles.css?url";
 
@@ -29,15 +32,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Krishna Copy Udyog | Notebook & Register Manufacturer" },
+      { title: "School Notebook Manufacturer Patna | Bulk Export | ZED Certified — Krishna Copy Udyog" },
       {
         name: "description",
         content:
-          "Patna-based manufacturer & wholesale supplier of notebooks, registers, and stationery. Bulk orders for schools, offices, and distributors.",
+          "Bulk school notebook manufacturer from Patna Bihar India. 1 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897",
+      },
+      {
+        name: "keywords",
+        content:
+          "school notebook manufacturer India, bulk notebook exporter Bihar, notebook manufacturer Patna, exercise book exporter India, ZED certified notebook",
       },
       { name: "author", content: "Krishna Copy Udyog" },
-      { property: "og:title", content: "Krishna Copy Udyog" },
-      { property: "og:description", content: "Notebook & Register Manufacturer in Patna, Bihar." },
+      { property: "og:title", content: "School Notebook Manufacturer Patna | Bulk Export | ZED Certified — Krishna Copy Udyog" },
+      { property: "og:description", content: "Bulk school notebook manufacturer from Patna Bihar India. 1 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -57,11 +65,11 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
         {children}
         <Scripts />
       </body>
@@ -70,5 +78,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <>
+      <Navbar />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+      <Footer />
+      <StickyWhatsApp />
+    </>
+  );
 }

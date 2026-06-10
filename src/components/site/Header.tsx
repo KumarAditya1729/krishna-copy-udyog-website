@@ -4,13 +4,13 @@ import { SITE, telLink, waLink } from "@/lib/site";
 import logo from "@/assets/logo.png";
 
 const NAV = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#products", label: "Products" },
-  { href: "#catalogue", label: "Catalogue" },
-  { href: "#certifications", label: "Certifications" },
-  { href: "#process", label: "Process" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#products", label: "Products" },
+  { href: "/#catalogue", label: "Catalogue" },
+  { href: "/#certifications", label: "Certifications" },
+  { href: "/export", label: "Export" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
