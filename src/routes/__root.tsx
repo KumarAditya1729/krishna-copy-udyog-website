@@ -36,7 +36,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Bulk school notebook manufacturer from Patna Bihar India. 1 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897",
+          "Bulk school notebook manufacturer from Patna Bihar India. 5 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897",
       },
       {
         name: "keywords",
@@ -45,17 +45,77 @@ export const Route = createRootRoute({
       },
       { name: "author", content: "Krishna Copy Udyog" },
       { property: "og:title", content: "School Notebook Manufacturer Patna | Bulk Export | ZED Certified — Krishna Copy Udyog" },
-      { property: "og:description", content: "Bulk school notebook manufacturer from Patna Bihar India. 1 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897" },
+      { property: "og:description", content: "Bulk school notebook manufacturer from Patna Bihar India. 5 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://krishnacopyudyog.com/" },
+      { property: "og:image", content: "https://krishnacopyudyog.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://krishnacopyudyog.com/og-image.png" },
     ],
     links: [
+      {
+        rel: "canonical",
+        href: "https://krishnacopyudyog.com/",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
       { rel: "icon", type: "image/png", href: "/logo.png" },
       { rel: "apple-touch-icon", href: "/logo.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Krishna Copy Udyog",
+          "image": "https://krishnacopyudyog.com/logo.png",
+          "url": "https://krishnacopyudyog.com",
+          "telephone": "+918210150897",
+          "email": "krishnacopyudyog2021@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kamaldah Path, Navneet Housing Society",
+            "addressLocality": "Patna City",
+            "addressRegion": "Bihar",
+            "postalCode": "800008",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 25.5941,
+            "longitude": 85.1376
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://wa.me/918210150897",
+            "https://www.linkedin.com/company/krishna-copy-udyog"
+          ]
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

@@ -26,7 +26,7 @@ export function Hero() {
           <h1 className="mt-8 font-display font-black text-foreground text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95]">
             School Notebook <br className="hidden md:block" /> Manufacturer. <br />
             <span className="text-primary text-3xl sm:text-4xl lg:text-5xl mt-4 block leading-tight">
-              1 Lakh+ Units/Month | Export Ready
+              5 Lakh+ Units/Month | Export Ready
             </span>
           </h1>
 

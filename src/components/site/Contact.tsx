@@ -36,16 +36,16 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-secondary/40">
+    <section id="contact" className="py-16 lg:py-24 bg-[#FCF8F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent">
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
             Get in Touch
           </span>
-          <h2 className="mt-3 font-display font-extrabold text-primary text-3xl sm:text-4xl lg:text-5xl leading-tight">
-            Get Catalogue & Bulk Pricing
+          <h2 className="mt-3 font-display font-extrabold text-[#3A3A3A] text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            Get Catalogue &amp; Bulk Pricing
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#9F9F9F] leading-relaxed">
             Talk to Suraj Kumar directly. Call, WhatsApp, or send us your requirement and
             we&apos;ll share the catalogue with bulk rates.
           </p>
@@ -53,47 +53,47 @@ export function Contact() {
 
         <div className="mt-10 grid lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Contact card */}
-          <div className="lg:col-span-2 rounded-3xl bg-gradient-navy text-primary-foreground p-6 sm:p-8 shadow-card relative overflow-hidden">
-            <div className="absolute -top-16 -right-16 h-56 w-56 rounded-full bg-accent/25 blur-3xl" />
+          <div className="lg:col-span-2 rounded-2xl bg-[#3A3A3A] text-white p-6 sm:p-8 shadow-card relative overflow-hidden">
+            <div className="absolute -top-16 -right-16 h-56 w-56 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
             <div className="relative">
-              <div className="flex items-center gap-3">
-                <span className="grid place-items-center h-12 w-12 rounded-2xl bg-white/15 backdrop-blur">
-                  <User className="h-5 w-5" />
+              <div className="flex items-center gap-3 mb-6">
+                <span className="grid place-items-center h-12 w-12 rounded-xl bg-white/10">
+                  <User className="h-5 w-5 text-white" />
                 </span>
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-white/70">
+                  <div className="text-xs uppercase tracking-wider text-white/60">
                     Contact Person
                   </div>
-                  <div className="font-display font-bold text-lg">{SITE.contact}</div>
+                  <div className="font-display font-bold text-lg text-white">{SITE.contact}</div>
                 </div>
               </div>
 
-              <ul className="mt-7 space-y-4">
+              <ul className="space-y-5">
                 <li className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 mt-0.5 text-accent shrink-0" />
-                  <a href={telLink} className="font-semibold hover:text-accent transition">
+                  <Phone className="h-5 w-5 mt-0.5 text-primary shrink-0" />
+                  <a href={telLink} className="text-white font-semibold hover:text-primary transition">
                     {SITE.phoneDisplay}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 mt-0.5 text-accent shrink-0" />
+                  <Mail className="h-5 w-5 mt-0.5 text-primary shrink-0" />
                   <a
                     href={mailLink}
-                    className="font-semibold hover:text-accent transition break-all"
+                    className="text-white font-semibold hover:text-primary transition break-all"
                   >
                     {SITE.email}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 mt-0.5 text-accent shrink-0" />
-                  <span className="text-white/90 leading-relaxed">{SITE.address}</span>
+                  <MapPin className="h-5 w-5 mt-0.5 text-primary shrink-0" />
+                  <span className="text-white/80 leading-relaxed">{SITE.address}</span>
                 </li>
               </ul>
 
-              <div className="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
                   href={telLink}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white text-primary font-semibold hover:bg-accent hover:text-primary transition"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-white text-[#3A3A3A] font-semibold hover:bg-primary hover:text-white transition"
                 >
                   <Phone className="h-4 w-4" /> Call
                 </a>
@@ -101,15 +101,9 @@ export function Contact() {
                   href={waLink(`Hello ${SITE.name}, I want bulk pricing.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-success text-white font-semibold hover:opacity-90 transition"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#25D366] text-white font-semibold hover:opacity-90 transition"
                 >
                   <MessageCircle className="h-4 w-4" /> WhatsApp
-                </a>
-                <a
-                  href={mailLink}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/10 text-white font-semibold hover:bg-white/20 transition"
-                >
-                  <Mail className="h-4 w-4" /> Email
                 </a>
               </div>
             </div>
@@ -118,7 +112,7 @@ export function Contact() {
           {/* Form */}
           <form
             onSubmit={submit}
-            className="lg:col-span-3 rounded-3xl bg-card border border-border p-6 sm:p-8 shadow-card"
+            className="lg:col-span-3 rounded-2xl bg-white border border-[#D9D9D9] p-6 sm:p-8 shadow-card"
             noValidate
           >
             <div className="grid sm:grid-cols-2 gap-4">
@@ -157,7 +151,7 @@ export function Contact() {
             <div className="mt-4">
               <label
                 htmlFor="enquiry-message"
-                className="block text-sm font-semibold text-foreground mb-1.5"
+                className="block text-sm font-semibold text-[#333333] mb-1.5"
               >
                 Message
               </label>
@@ -168,16 +162,16 @@ export function Contact() {
                 onChange={(e) => update("message", e.target.value)}
                 rows={4}
                 placeholder="Share size, paper, customization or delivery details..."
-                className="w-full rounded-xl border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition resize-none"
+                className="w-full rounded-lg border border-[#D9D9D9] bg-white px-4 py-3 text-[#333333] placeholder:text-[#BBBBBB] focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"
               />
             </div>
             <button
               type="submit"
-              className="mt-5 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-success text-white font-semibold shadow-card hover:-translate-y-0.5 transition"
+              className="mt-5 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#25D366] text-white font-semibold shadow-card hover:opacity-90 transition"
             >
               <Send className="h-4 w-4" /> Send Enquiry on WhatsApp
             </button>
-            <p className="mt-3 text-xs text-muted-foreground">
+            <p className="mt-3 text-xs text-[#9F9F9F]">
               Submitting opens WhatsApp with your details prefilled.
             </p>
           </form>

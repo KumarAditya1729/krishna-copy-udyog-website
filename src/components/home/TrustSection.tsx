@@ -1,47 +1,120 @@
-import { Award, CheckCircle, FileText, Globe } from "lucide-react";
+import { Award, Globe, Package, Palette, Clock, ShieldCheck } from "lucide-react";
+
+const features = [
+  {
+    icon: Award,
+    title: "Quality paper",
+    desc: "Premium writing paper carefully sourced for best writing experience.",
+    color: "#7c5cbf",
+  },
+  {
+    icon: Globe,
+    title: "Competitive wholesale pricing",
+    desc: "Direct-from-factory rates ensuring maximum margins for bulk buyers.",
+    color: "#6366f1",
+  },
+  {
+    icon: Package,
+    title: "Durable binding",
+    desc: "Strong saddle-stitch, spiral, and perfect binding options available.",
+    color: "#8b5cf6",
+  },
+  {
+    icon: Palette,
+    title: "Custom sizes & page count",
+    desc: "Fully tailored specifications to meet your institution's requirements.",
+    color: "#a78bfa",
+  },
+  {
+    icon: Clock,
+    title: "Bulk order support",
+    desc: "High capacity manufacturing capable of 5 Lakh+ units per month.",
+    color: "#7c5cbf",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Registered MSME business",
+    desc: "Verified, compliant, and legally registered manufacturer in Bihar.",
+    color: "#6366f1",
+  },
+];
 
 export function TrustSection() {
-  const certifications = [
-    {
-      icon: <Award className="h-8 w-8 text-primary" />,
-      title: "MSME Certified",
-      desc: "Govt. of India Recognized",
-      certNo: "UDYAM-BR-26-00XXXXX",
-    },
-    {
-      icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      title: "ZED Quality Certification",
-      desc: "Zero Defect Zero Effect",
-      certNo: "ZED-BR-202X-XXXX",
-    },
-    {
-      icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "IEC Export License",
-      desc: "Global Shipping Ready",
-      certNo: "IEC: 051XXXXXXX",
-    },
-    {
-      icon: <FileText className="h-8 w-8 text-primary" />,
-      title: "GST Registered",
-      desc: "Fully Compliant Billing",
-      certNo: "GSTIN: 10XXXXX0000X1Z5",
-    },
-  ];
-
   return (
-    <section className="py-12 bg-white border-y border-border">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {certifications.map((cert, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-4 rounded-2xl transition-transform hover:-translate-y-1 hover:shadow-soft bg-background">
-              <div className="mb-4 rounded-full bg-primary/10 p-3">
-                {cert.icon}
+    <section
+      className="py-24 relative overflow-hidden"
+      style={{ background: '#0f0d27' }}
+    >
+      {/* Subtle glow */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] pointer-events-none opacity-15"
+        style={{ background: 'radial-gradient(ellipse, #7c5cbf 0%, transparent 70%)' }}
+      />
+
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p
+            className="text-sm font-bold tracking-[0.2em] uppercase mb-4"
+            style={{ color: '#a78bfa' }}
+          >
+            Why Choose Us
+          </p>
+          <h2
+            className="font-display font-black text-white leading-tight mb-5"
+            style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
+          >
+            Why Buyers Choose{' '}
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #a78bfa, #7c5cbf)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Krishna Copy Udyog
+            </span>
+          </h2>
+          <p className="text-base max-w-xl mx-auto leading-relaxed" style={{ color: '#8b83b0' }}>
+            From high-quality raw paper to clean finishing — we deliver durable stationery with competitive wholesale pricing.
+          </p>
+        </div>
+
+        {/* Feature grid — 3 col */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {features.map((f, i) => {
+            const Icon = f.icon;
+            return (
+              <div
+                key={i}
+                className="group rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  background: 'rgba(30,27,69,0.5)',
+                  border: '1px solid rgba(124,92,191,0.2)',
+                  backdropFilter: 'blur(8px)',
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(124,92,191,0.5)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px rgba(124,92,191,0.15)';
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(124,92,191,0.2)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                }}
+              >
+                {/* Icon */}
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                  style={{ background: `rgba(124,92,191,0.15)` }}
+                >
+                  <Icon className="w-6 h-6" style={{ color: f.color }} />
+                </div>
+                <h3 className="font-display font-bold text-lg text-white mb-3">{f.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#8b83b0' }}>{f.desc}</p>
               </div>
-              <h3 className="font-bold text-foreground mb-1">{cert.title}</h3>
-              <p className="text-sm text-muted-foreground mb-1">{cert.desc}</p>
-              <p className="text-xs font-mono text-primary/80 bg-primary/5 px-2 py-1 rounded mt-auto">{cert.certNo}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

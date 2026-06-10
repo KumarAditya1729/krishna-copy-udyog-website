@@ -27,7 +27,7 @@ export function Process() {
                 key={s.n}
                 className="relative rounded-2xl bg-card border border-border p-5 shadow-soft hover:shadow-card transition"
               >
-                <div className="grid place-items-center h-14 w-14 rounded-2xl bg-gradient-navy text-primary-foreground font-display font-bold text-lg shadow-card mb-4">
+                <div className="grid place-items-center h-14 w-14 rounded-2xl bg-primary text-white font-display font-bold text-lg shadow-card mb-4">
                   {s.n}
                 </div>
                 <div className="font-display font-bold text-primary">{s.title}</div>

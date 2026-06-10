@@ -69,7 +69,7 @@ export function Certifications() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <span className="grid place-items-center h-12 w-12 rounded-2xl bg-gradient-navy text-primary-foreground">
+                  <span className="grid place-items-center h-12 w-12 rounded-2xl bg-primary text-white">
                     <FileText className="h-5 w-5" />
                   </span>
                   <h3 className="font-display font-bold text-primary text-lg">
