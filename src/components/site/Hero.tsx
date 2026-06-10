@@ -23,9 +23,11 @@ export function Hero() {
             MSME Registered Manufacturer
           </span>
 
-          <h1 className="mt-8 font-display font-black text-foreground text-5xl md:text-7xl lg:text-[5.5rem] tracking-tighter leading-[0.95]">
-            1 Lakh+ Units <br className="hidden md:block" />
-            <span className="text-primary">Per Month.</span>
+          <h1 className="mt-8 font-display font-black text-foreground text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95]">
+            School Notebook <br className="hidden md:block" /> Manufacturer. <br />
+            <span className="text-primary text-3xl sm:text-4xl lg:text-5xl mt-4 block leading-tight">
+              1 Lakh+ Units/Month | Export Ready
+            </span>
           </h1>
 
           <p className="mt-8 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed font-medium">
