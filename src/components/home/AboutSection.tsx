@@ -34,7 +34,7 @@ export function AboutSection() {
             <Badge variant="outline" className="mb-4 text-primary border-primary/20">About Us</Badge>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Krishna Copy Udyog</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Krishna Copy Udyog is a ZED-certified school notebook manufacturer based in Patna, Bihar, India. Founded in 2019, the company produces over 1 lakh notebooks per month and serves wholesalers, distributors, educational institutions, and international importers.
+              Krishna Copy Udyog is a ZED-certified school notebook manufacturer based in Patna, Bihar, India. Founded in 2019 by Mr. Suraj Kumar, we have grown to produce 1 Lakh+ notebooks per month. We manufacture school notebooks, exercise books, spiral registers, and custom stationery for bulk buyers, wholesalers, and international importers across Africa, Gulf countries, Nepal, and Bangladesh. Our products meet international quality standards backed by MSME, GST, IEC, and ZED certifications.
             </p>
             
             <div className="mb-8">

@@ -22,7 +22,7 @@ export function MobileCTA() {
       </div>
       {/* Floating WhatsApp - desktop */}
       <a
-        href={waLink(`Hello ${SITE.name}, I want bulk pricing.`)}
+        href={waLink(`Hello I want bulk notebook inquiry`)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp enquiry"

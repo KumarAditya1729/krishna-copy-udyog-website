@@ -49,45 +49,47 @@
 }
 
 :root {
-  --radius: 1rem;
-  --background: oklch(0.992 0.012 95);
-  --foreground: oklch(0.21 0.03 265);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.21 0.03 265);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.21 0.03 265);
-  --primary: oklch(0.27 0.07 255);
-  --primary-foreground: oklch(0.992 0.012 95);
-  --primary-soft: oklch(0.34 0.08 255);
-  --secondary: oklch(0.96 0.025 95);
-  --secondary-foreground: oklch(0.27 0.07 255);
-  --muted: oklch(0.96 0.012 95);
-  --muted-foreground: oklch(0.55 0.03 250);
-  --accent: oklch(0.78 0.16 75);
-  --accent-foreground: oklch(0.21 0.03 265);
-  --accent-soft: oklch(0.96 0.06 90);
-  --success: oklch(0.55 0.16 145);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.92 0.01 250);
-  --input: oklch(0.92 0.01 250);
-  --ring: oklch(0.78 0.16 75);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --radius: 0rem; /* Exaggerated Minimalism uses sharp edges */
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+  --card: #FFFFFF;
+  --card-foreground: #1E293B;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E293B;
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  --primary-soft: #3B82F6;
+  --secondary: #3B82F6;
+  --secondary-foreground: #FFFFFF;
+  --muted: #E2E8F0;
+  --muted-foreground: #64748B;
+  --accent: #F97316;
+  --accent-foreground: #FFFFFF;
+  --accent-soft: #FFEDD5;
+  --success: #16A34A;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #CBD5E1;
+  --input: #CBD5E1;
+  --ring: #F97316;
+  --sidebar: #0F172A;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #2563EB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1E293B;
+  --sidebar-accent-foreground: #F8FAFC;
+  --sidebar-border: #334155;
+  --sidebar-ring: #F97316;
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.992 0.012 95) 0%, oklch(0.96 0.06 90) 100%);
-  --gradient-navy: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%);
-  --shadow-soft: 0 4px 16px -4px oklch(0.27 0.07 255 / 0.08);
-  --shadow-card: 0 8px 30px -10px oklch(0.27 0.07 255 / 0.12);
-  --shadow-lift: 0 20px 40px -15px oklch(0.27 0.07 255 / 0.20);
+  --gradient-hero: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+  --gradient-navy: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+  
+  /* Exaggerated Minimalism avoids complex soft shadows, using crisp borders or sharp shadows */
+  --shadow-soft: 0 0 0 1px #CBD5E1;
+  --shadow-card: 4px 4px 0 0 #1E293B;
+  --shadow-lift: 8px 8px 0 0 #1E293B;
 
-  --font-display: "Manrope", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
 

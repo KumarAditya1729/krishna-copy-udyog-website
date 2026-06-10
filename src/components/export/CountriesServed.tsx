@@ -14,7 +14,7 @@ export function CountriesServed() {
       color: "bg-amber-500/10 text-amber-700 border-amber-200"
     },
     {
-      name: "South Asia",
+      name: "Neighbors",
       countries: ["Nepal", "Bangladesh", "Sri Lanka"],
       color: "bg-green-500/10 text-green-700 border-green-200"
     }

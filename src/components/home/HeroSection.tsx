@@ -19,12 +19,11 @@ export function HeroSection() {
           
           <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-foreground">
             School Notebook Manufacturer <br className="hidden md:block" />
-            <span className="text-primary">1 Lakh+ Units/Month</span>
+            <span className="text-primary">1 Lakh+ Units/Month | Export Ready</span>
           </h1>
           
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl mb-10 leading-relaxed">
-            ZED Certified • MSME Registered • GST Compliant • IEC Export License <br/>
-            Shipping to Africa, Gulf & South Asia
+            ZED Certified | MSME | GST | IEC | Shipping to Africa, Gulf & Nepal
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

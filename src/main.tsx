@@ -17,7 +17,24 @@ import { Footer } from "./components/site/Footer";
 
 import "./styles.css";
 
+import { ExportPage } from "./components/site/ExportPage";
+
 function App() {
+  const path = window.location.pathname;
+
+  if (path === "/export") {
+    return (
+      <>
+        <Header />
+        <main>
+          <ExportPage />
+        </main>
+        <Footer />
+        <MobileCTA />
+      </>
+    );
+  }
+
   return (
     <>
       <Header />

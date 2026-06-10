@@ -32,20 +32,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "School Notebook Manufacturer India | Bulk Exporter | Krishna Copy Udyog" },
+      { title: "School Notebook Manufacturer Patna | Bulk Export | ZED Certified — Krishna Copy Udyog" },
       {
         name: "description",
         content:
-          "Bulk school notebook manufacturer from India producing 1 lakh+ units per month. Export-ready supplier serving Africa, Gulf countries, Nepal, Bangladesh, and Sri Lanka. MSME, ZED, GST, and IEC certified.",
+          "Bulk school notebook manufacturer from Patna Bihar India. 1 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897",
       },
       {
         name: "keywords",
         content:
-          "school notebook manufacturer India, bulk notebook exporter, exercise book manufacturer, OEM notebook supplier, notebook manufacturer Bihar, notebook exporter India",
+          "school notebook manufacturer India, bulk notebook exporter Bihar, notebook manufacturer Patna, exercise book exporter India, ZED certified notebook",
       },
       { name: "author", content: "Krishna Copy Udyog" },
-      { property: "og:title", content: "School Notebook Manufacturer India | Bulk Exporter | Krishna Copy Udyog" },
-      { property: "og:description", content: "Bulk school notebook manufacturer from India producing 1 lakh+ units per month. Export-ready supplier." },
+      { property: "og:title", content: "School Notebook Manufacturer Patna | Bulk Export | ZED Certified — Krishna Copy Udyog" },
+      { property: "og:description", content: "Bulk school notebook manufacturer from Patna Bihar India. 1 Lakh+ units/month. Export to Africa, Gulf, Nepal. ZED, MSME, IEC, GST certified. Custom OEM branding. WhatsApp: 8210150897" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

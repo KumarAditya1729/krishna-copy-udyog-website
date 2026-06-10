@@ -6,21 +6,25 @@ export function TrustSection() {
       icon: <Award className="h-8 w-8 text-primary" />,
       title: "MSME Certified",
       desc: "Govt. of India Recognized",
+      certNo: "UDYAM-BR-26-00XXXXX",
     },
     {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
       title: "ZED Quality Certification",
       desc: "Zero Defect Zero Effect",
+      certNo: "ZED-BR-202X-XXXX",
     },
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
       title: "IEC Export License",
       desc: "Global Shipping Ready",
+      certNo: "IEC: 051XXXXXXX",
     },
     {
       icon: <FileText className="h-8 w-8 text-primary" />,
       title: "GST Registered",
       desc: "Fully Compliant Billing",
+      certNo: "GSTIN: 10XXXXX0000X1Z5",
     },
   ];
 
@@ -34,7 +38,8 @@ export function TrustSection() {
                 {cert.icon}
               </div>
               <h3 className="font-bold text-foreground mb-1">{cert.title}</h3>
-              <p className="text-sm text-muted-foreground">{cert.desc}</p>
+              <p className="text-sm text-muted-foreground mb-1">{cert.desc}</p>
+              <p className="text-xs font-mono text-primary/80 bg-primary/5 px-2 py-1 rounded mt-auto">{cert.certNo}</p>
             </div>
           ))}
         </div>
