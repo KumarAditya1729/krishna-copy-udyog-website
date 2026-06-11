@@ -23,8 +23,8 @@ export function ExportHero() {
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-            Bulk Notebook Export <br />
-            <span className="gradient-text">from India</span>
+            Bulk Notebook Export <span className="gradient-text">from India</span>
+            <span className="block text-2xl md:text-3xl mt-3 text-white/80 font-bold">| School Notebook Manufacturer</span>
           </h1>
           <p className="text-lg text-[#8b83b0] mb-10 max-w-2xl leading-relaxed">
             Krishna Copy Udyog is a trusted Indian manufacturer exporting premium quality notebooks,

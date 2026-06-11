@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExportHero } from "@/components/export/ExportHero";
 import { ExportCapabilities } from "@/components/export/ExportCapabilities";
+import { ExportMap } from "@/components/export/ExportMap";
 import { CountriesServed } from "@/components/export/CountriesServed";
 import { ContactSection } from "@/components/home/ContactSection";
 
@@ -32,6 +33,7 @@ function ExportPage() {
     <div className="flex flex-col w-full">
       <ExportHero />
       <ExportCapabilities />
+      <ExportMap />
       <CountriesServed />
       <ContactSection />
     </div>
