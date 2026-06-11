@@ -11,22 +11,22 @@ export function ExportMap() {
   const destinations = [
     {
       name: "Africa",
-      top: "58%",
-      left: "52%",
+      top: "52%",
+      left: "53.5%",
       color: "rgba(96,165,250,1)", // blue
       delay: "0s",
     },
     {
       name: "Gulf",
-      top: "43%",
-      left: "61%",
+      top: "41%",
+      left: "60.5%",
       color: "rgba(251,191,36,1)", // amber
       delay: "0.2s",
     },
     {
       name: "Neighbors",
-      top: "46%",
-      left: "72%",
+      top: "43%",
+      left: "66.5%",
       color: "rgba(52,211,153,1)", // emerald
       delay: "0.4s",
     },
@@ -34,8 +34,8 @@ export function ExportMap() {
 
   const origin = {
     name: "India",
-    top: "45%",
-    left: "69%",
+    top: "43%",
+    left: "65%",
     color: "rgba(167,139,250,1)", // purple
   };
 
